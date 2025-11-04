@@ -18,7 +18,7 @@ keymap -c "$SCRIPT_DIR/config.yaml" parse -z "$PROJECT_ROOT/config/charybdis.key
 # Draw the SVG using the physical layout JSON
 echo "🖼️  Drawing SVG with physical layout..."
 keymap -c "$SCRIPT_DIR/config.yaml" draw "$SCRIPT_DIR/keymap_parsed.yaml" \
-    -j "$PROJECT_ROOT/config/info.json" > "$SCRIPT_DIR/keymap.svg"
+    -j "$PROJECT_ROOT/config/info.json" -l charybdis_6col_layout > "$SCRIPT_DIR/keymap.svg"
 # Remove the parsed YAML file
 echo "🧹 Removing parsed YAML file..."
 rm "$SCRIPT_DIR/keymap_parsed.yaml"
